@@ -1,16 +1,18 @@
 package stepDefinition;
 
+import base.BaseClass;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import page.LoginPage;
 
-public class LoginDefinition {
+public class LoginDefinition extends BaseClass {
 
 	LoginPage login = new LoginPage();
 	
 	@Given("i have URL and Launch the Browser")
 	public void i_have_url_and_launch_the_browser() {
-	   login.i_have_url_and_launch_the_browser(); 
+	   mysetup(); 
 	}
 
 	@When("Click on the Try now")
@@ -102,6 +104,17 @@ public class LoginDefinition {
 	public void click_on_the_submit_button() {
 		login.click_on_the_submit_button();
 		
+		
+	}
+	
+	@Then("click on the logout")
+	public void click_on_the_logout() {
+		login.click_on_the_logout();
+	}
+	
+	@Then("Logout")
+	public void Logout() {
+		login.Logout();
 		
 	}
 

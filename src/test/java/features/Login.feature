@@ -2,7 +2,7 @@ Feature: Signup Functionality
 
 
 @smoke
-Scenario: Verify the Signup Functionality
+Scenario: Verify the Signup and login Functionality
 
 Given i have URL and Launch the Browser
 When Click on the Try now
@@ -23,6 +23,8 @@ When Verify the login here
 When Enter the mail
 When Enter the password
 When Click on the submit button
+Then click on the logout
+Then Logout
 
 
 

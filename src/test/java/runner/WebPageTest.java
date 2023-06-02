@@ -6,9 +6,9 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features="src/test/java/features",tags="@smoke",
-plugin= {"pretty","html:target/TestReport/test.html"},glue= {"stepDefinition"})
+plugin= {"pretty","html:target/TestReport/test.html","json:/target/cucumber-report/cucumber.json"},glue= {"stepDefinition"})
 
-public class Webpage {
+public class WebPageTest {
 	
 	
 	

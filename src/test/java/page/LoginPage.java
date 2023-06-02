@@ -9,23 +9,17 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.Select;
 
+import base.BaseClass;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 
-public class LoginPage {
+public class LoginPage extends BaseClass  {
 	
-	public WebDriver driver;
+	//public static WebDriver driver;
 	
-	public void i_have_url_and_launch_the_browser() {
-	WebDriverManager.chromedriver().setup();
-	ChromeOptions options = new ChromeOptions();
-	options.addArguments("--remote-allow-origins=*");
-	driver = new ChromeDriver(options);
-	driver.get("https://manentia.vercel.app/");
-	driver.manage().window().maximize();
-	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-	    
-	}
+//	public void i_have_url_and_launch_the_browser() {
+//		mysetup();
+//	}
 	
 	public void click_on_the_try_now() {
 	WebElement Trynow=driver.findElement(By.xpath("//button[normalize-space()='Try Now']"));
@@ -127,4 +121,18 @@ public class LoginPage {
 		 sbmt.click();
 		
 }
+	
+	public void click_on_the_logout() {
+	WebElement logout =driver.findElement(By.xpath("//button[normalize-space()='Log out']"));
+	logout.click();
+	
+	
+	}
+	public void Logout() {
+		WebElement logout2 =driver.findElement(By.xpath("//button[@type='button'][normalize-space()='Log out']"));
+		logout2.click();
+		
+	}
+
+	
 }
